@@ -2,12 +2,12 @@
 
 LpProblem::LpProblem
 (
-	std::function<double(const Eigen::VectorXd&)> objectiveFunction
+	const Eigen::VectorXd& objectiveFunction
 	, const Eigen::MatrixXd& constraints
 	, const Eigen::VectorXd& rhs
 	, const std::vector<ConstraintType>& constraintTypes
 )
-	: objectiveFunction_(std::move(objectiveFunction))
+	: objectiveFunction_(objectiveFunction)
 	, constraints_(constraints)
 	, rhs_(rhs)
 	, constraintTypes_(constraintTypes)
@@ -17,7 +17,7 @@ LpProblem::LpProblem
 
 void LpProblem::init
 (
-	std::function<double(const Eigen::VectorXd&)> objectiveFunction
+	const Eigen::VectorXd& objectiveFunction
 	, const Eigen::MatrixXd& constraints
 	, const Eigen::VectorXd& rhs
 	, const std::vector<ConstraintType>& constraintTypes
@@ -27,16 +27,11 @@ void LpProblem::init
 		throw std::logic_error("LpProblem has already been initialized.");
 	}
 
-	objectiveFunction_ = std::move(objectiveFunction);
+	objectiveFunction_ = objectiveFunction;
 	constraints_ = constraints;
 	rhs_ = rhs;
 	constraintTypes_ = constraintTypes;
 	isInitialized_ = true;
-}
-
-std::function<double(double)> LpProblem::getObjectiveFunction() const
-{
-	return std::function<double(double)>();
 }
 
 LpProblem& LpProblem::convertToCanonical()
