@@ -1,1 +1,1 @@
-#define _pure_(func) [[nodiscard]] static constexpr func noexcept
+#define _pure_(func) [[nodiscard]] static constexpr func
