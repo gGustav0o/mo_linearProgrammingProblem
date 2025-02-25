@@ -1,17 +1,84 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{f3b924b3-6785-460d-ad91-197c5b280702}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{ff7bcff0-7799-45ef-9535-7a47d37d5201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\input">
+      <UniqueIdentifier>{729c61e7-5529-45fd-921e-c9b8ed43c799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\interfaces">
+      <UniqueIdentifier>{92768547-86a8-4c48-b135-07d7e97c0a59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\output">
+      <UniqueIdentifier>{bc682cba-b604-4c3a-a545-19209d5d349a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\input">
+      <UniqueIdentifier>{df3952cc-bdbf-4ee5-8cec-c7fa35034d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\output">
+      <UniqueIdentifier>{df82dfcd-50bb-4c95-b7f4-a6d87e83f543}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LpProblem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SimplexSolver.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\input\ConsoleInput.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\input\HardcodedInput.cpp">
+      <Filter>src\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\output\ConsoleOutput.cpp">
+      <Filter>src\output</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\LpProblem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SimplexSolver.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\input\ConsoleInput.h">
+      <Filter>include\input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\input\HardcodedInput.h">
+      <Filter>include\input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\interfaces\ILpInput.h">
+      <Filter>include\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\interfaces\ILpOutput.h">
+      <Filter>include\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\output\ConsoleOutput.h">
+      <Filter>include\output</Filter>
+    </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
