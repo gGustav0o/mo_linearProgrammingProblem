@@ -1,7 +1,5 @@
 #include "../include/LpProblem.h"
 
-
-
 LpProblem::LpProblem
 (
 	std::function<double(const Eigen::VectorXd&)> objectiveFunction
@@ -44,4 +42,9 @@ std::function<double(double)> LpProblem::getObjectiveFunction() const
 LpProblem& LpProblem::convertToCanonical()
 {
 	return *this;
+}
+
+void LpProblem::recalculateType()
+{
+
 }

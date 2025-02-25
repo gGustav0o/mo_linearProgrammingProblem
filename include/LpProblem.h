@@ -47,5 +47,7 @@ private:
     std::vector<ConstraintType> constraintTypes_{};
     LpType problemType_{LpType::GENERAL};
     bool isInitialized_ = false;
+
+    void recalculateType();
 };
 
